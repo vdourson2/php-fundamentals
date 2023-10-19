@@ -28,7 +28,7 @@
 Display the value stored at the first index in another <p> tag-->
 <?php 
     $family = array('Toto','Titi','Tutu','Tata');
-    echo "<p>The first person in my family is $family.</p>"
+    echo "<p>The first person in my family is $family[0].</p>"
 ?>
 
 
