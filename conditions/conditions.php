@@ -14,6 +14,7 @@ if( $room_is_filthy ){
 } else {
 	echo "<br>Nothing to do, room is neat.";
 }
+echo"<br>";
 
 // 1.2 Clean your room Exercise, improved
 
@@ -34,6 +35,7 @@ if( $room_filthiness == $possible_states[0] ){
 }else {
 	echo "<br>Too clean : let it be!";
 }
+echo"<br><br>";
 
 // 2. "Different greetings according to time" Exercise
 
@@ -43,22 +45,64 @@ if( $room_filthiness == $possible_states[0] ){
 // If the time is between 16h01 and 21h00, display "Good evening !".
 // If the time is between 21h01 and 04h59, display "Good night !".
 
-
 $now = getdate();
 
 var_dump($now);
-
+$time = $now["hours"]*100 + $now["minutes"];
+echo $time;
+echo"<br>";
+echo $now['hours'] . $now['minutes'];
 //Test the value of $now and display the right message according to the specifications.
-if( $now["hours"]>=5 AND  $now["hours"]<=9){
+if( $time>=500 AND  $time<=9){
     echo "<br>Good morning !";
-} else if( $now["hours"]>9 AND  $now["hours"]<=12) {
+} else if( $time>900 AND  $time<=1200) {
     echo "<br>Good day !";
-} else if( $now["hours"]>12 AND  $now["hours"]<=16){
+} else if( $time>1200 AND  $time<=1600){
     echo "<br>Good afternoon !";
-} else if( $now["hours"]>16 AND  $now["hours"]<=21){
+} else if( $time>1600 AND  $time<=2100){
     echo "<br>Good evening !";
 } else {
     echo "<br>Good night!";
-}
+};
+echo"<br><br>";
+
+// 3. "Different greetings according to age" Exercise
 
 ?>
+<form method="get" action="">
+    <label for="age">Your age :</label>
+	<input type="number" name="age"><br>
+    <input type="radio" value="man" name="gender" id="man"/>
+    <label for="man">Man</label><br>
+    <input type="radio" value="woman" name="gender" id="woman" />
+    <label for="woman">Woman</label><br>
+	<input type="submit" name="submit" value="Greet me now">
+</form>
+
+<?php 
+if (isset($_GET['age'],$_GET['gender'])){
+    // Form processing
+    if ($_GET['age'] < 12){
+        if ($_GET['gender'] == "man"){
+            echo "Hello boy";
+        } else {
+            echo "Hello girl";
+        }
+    } else if ($_GET['age'] < 18){
+        if ($_GET['gender'] == "man"){
+            echo "Hello mister teenager";
+        } else {
+            echo "Hello miss teenager";
+        }
+    } else if ($_GET['age'] < 115){
+        if ($_GET['gender'] == "man"){
+            echo "Hello mister";
+        } else {
+            echo "Hello madam";
+        }
+    } else {
+        echo "Wow! Still alive ? Are you a robot, like me ? Can I hug you ?";
+    } 
+}
+?>
+
