@@ -13,7 +13,7 @@
 <?php  
 if (isset($_GET['what'])){
     $what = $_GET['what'];
-    $imgCat = '<img src="cat.gif" alt="gif of a cat">';
+    $imgCat = '<img src="assets/cat.gif" alt="gif of a cat">';
     $imgHuman = '<img src="https://media.giphy.com/media/l3nWflasE5VWXHdRu/giphy.gif" alt="gif of a human">';
     $imgLicorn = '<img src="https://media.giphy.com/media/j0kQJxo5mzGYb4EvWK/giphy.gif" alt="gif of a licorn">';
     $image = ($what == 'cat') ? $imgCat : (($what == 'human') ? $imgHuman : $imgLicorn);

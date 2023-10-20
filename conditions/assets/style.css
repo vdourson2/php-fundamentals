@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Hahmlet:wght@500;600;700;800;900&family=Kalam:wght@300&display=swap');
+
+*, *::before, *::after {
+	box-sizing: border-box;
+  }
+
+.body{
+    width:100vw;
+    
+}
+
+h1{
+    font-family: 'Hahmlet', serif;
+    text-align:center;
+}
+
+form{
+    background-color: lightblue;
+    padding:20px;
+    margin: 10px;
+    font-family: 'Hahmlet', serif;
+}
+
+input{
+    padding:2px 5px;
+}
+#submit{
+    display: block;
+    margin: 20px 0 0 0;
+    padding: 3px 10px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.letter{
+    font-family: 'Kalam', cursive;
+    width: 90%;
+    max-width : 400px;
+    margin:40px auto;
+    padding: 10px 30px;
+    border : black 1px solid
+}
+
+#date {
+    text-align: right;
+}
